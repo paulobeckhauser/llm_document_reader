@@ -36,15 +36,15 @@ def input_image_details(uploaded_file):
 
 st.set_page_config(page_title="MultiLanguage PDF Extractor")
 
-st.header("MUltiLanguage PDF Extractor")
+st.header("MultiLanguage PDF Extractor")
 input=st.text_input("Input Prompt: ", key="input")
-uploaded_file = st.file_uploader("Choose an image of the pdf...", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Choose an image of the pdf...", type=["jpg", "jpeg", "png", "pdf"])
 
 if uploaded_file is not None:
     image=Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 
-submit=st.button("Tell me about the PDF")
+submit=st.button("Tell me about the Image")
 
 
 input_prompt="""
